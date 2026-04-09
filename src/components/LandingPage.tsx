@@ -95,7 +95,7 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
 
               <h1 className="text-5xl sm:text-7xl font-black tracking-tighter text-slate-900 leading-[0.85] flex flex-col items-center">
                 <img 
-                  src="/public/logo.png" 
+                  src="/logo.png" 
                   alt="RoutoHome Logo"
                   className="h-32 sm:h-48 md:h-72 lg:h-96 w-auto object-contain mb-8"
                 />
