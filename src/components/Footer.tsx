@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="col-span-2 space-y-6">
             <div className="flex items-center">
               <img 
-                src="/logo.png"  
+                src="/public/logo.png"  
                 alt="RoutoHome Logo" 
                 className="h-20 w-auto object-contain brightness-0 invert"
                 referrerPolicy="no-referrer"

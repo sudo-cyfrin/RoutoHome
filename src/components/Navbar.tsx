@@ -32,7 +32,7 @@ export default function Navbar({ onNavigate, currentScreen }: NavbarProps) {
               className="flex items-center group"
             >
               <img 
-                src="/logo.png"  
+                src="/public/logo.png"  
                 alt="RoutoHome Logo" 
                 className="h-12 sm:h-16 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform"
                 referrerPolicy="no-referrer"

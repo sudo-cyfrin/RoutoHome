@@ -276,7 +276,7 @@ export default function Auth({ initialMode = 'login', onSuccess }: AuthProps) {
             >
               <div className="text-center mb-10">
                 <img 
-                  src="/logo.png" 
+                  src="/public/logo.png" 
                   alt="RoutoHome Logo" 
                   className="h-30 w-auto object-contain mx-auto mb-6"
                   referrerPolicy="no-referrer"
