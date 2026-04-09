@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #FFB347;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #FFF3E0;
+  --color-accent: #FF8C00;
+  --color-muted: #F5F5F5;
+  --color-border: #E5E5E5;
+}
+
+@layer base {
+  body {
+    @apply bg-yellow-100 text-slate-900 antialiased;
+  }
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-semibold py-3 px-6 rounded-xl hover:bg-accent transition-all w-full text-center shadow-md hover:shadow-lg active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply bg-secondary text-accent font-semibold py-3 px-6 rounded-xl hover:bg-primary/10 transition-all w-full text-center border border-primary/20;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-border bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-slate-400;
+}
+
+/* Website Specific Layouts */
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl rounded-3xl;
+}
+
+.nav-link {
+  @apply text-slate-600 hover:text-primary font-semibold transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "RoutoHome",
+  "description": "A safety-focused navigation and public transport finder app with risk assessment and emergency features.",
+  "requestFramePermissions": ["geolocation"]
+}
