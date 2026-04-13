@@ -3,7 +3,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 const ai = new GoogleGenAI({
   apiKey: import.meta.env.VITE_GEMINI_API_KEY,
 });
-
+console.log("API KEY:", import.meta.env.VITE_GEMINI_API_KEY);
 export interface SafetyArea {
   name: string;
   distance: string;
@@ -24,7 +24,7 @@ export async function getSafetyAssessment(location: string): Promise<SafetyAsses
     : `Provide a safety assessment for the area: "${location}". 
        Include a general safety recommendation and a list of 3 specific "prone areas" (could be fictional but realistic for the city if known) with their risk levels (High, Medium, Low) and approximate distance from the center of "${location}".`;
 
-  if (!process.env.GEMINI_API_KEY) {
+  if (!import.meta.env.VITE_GEMINI_API_KEY) {
     return {
       recommendation: "Stay alert and use well-lit routes. (Mock data - API key missing)",
       proneAreas: [

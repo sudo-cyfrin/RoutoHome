@@ -20,8 +20,8 @@ export interface TransportOption {
 }
 
 export async function getTransportRoutes(from: string, to: string): Promise<TransportOption[]> {
-  if (!process.env.GEMINI_API_KEY) {
-    console.warn("GEMINI_API_KEY is not set. Returning mock data.");
+  if (!import.meta.env.VITE_GEMINI_API_KEY) {
+    console.warn("VITE_GEMINI_API_KEY is not set. Returning mock data.");
     return [
       { 
         type: 'Bus', 
