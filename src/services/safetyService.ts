@@ -1,9 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+  apiKey: import.meta.env.VITE_GEMINI_API_KEY || '',
 });
-console.log("API KEY:", import.meta.env.VITE_GEMINI_API_KEY);
 export interface SafetyArea {
   name: string;
   distance: string;
