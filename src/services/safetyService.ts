@@ -1,4 +1,5 @@
 import { GoogleGenAI, Type } from "@google/genai";
+import { getPredefinedSafetyData } from '../data/predefinedSafetyData';
 
 const ai = new GoogleGenAI({
   apiKey: import.meta.env.VITE_GEMINI_API_KEY || '',
@@ -15,6 +16,12 @@ export interface SafetyAssessment {
 }
 
 export async function getSafetyAssessment(location: string): Promise<SafetyAssessment> {
+  // Check for predefined data first
+  const predefinedData = getPredefinedSafetyData(location);
+  if (predefinedData) {
+    return predefinedData;
+  }
+
   const isCoordinates = location.startsWith('Coordinates:');
   const prompt = isCoordinates 
     ? `Provide a safety assessment for the area around these coordinates: "${location}". 
